@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --main-font: Nunito, "Trebuchet MS", sans-serif;
+  --button-bg: white;
+  --button-hover-bg: rgb(202, 202, 202);
+  --button-active-bg: rgb(149, 149, 149);
+  --content-bg: white;
+}
+
+
+/*hehe button*/
+.container a {
+    width: 230px;
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 0.1em 1.75em;
+  background: var(--button-bg);
+  border: 1px solid black;
+  border-radius: 7px;
+  box-shadow: 0 5px black;
+  transition: 0.45s ease;
+}
+.container a:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(2px);
+  box-shadow: 0 3px black;
+}
+.container a:active {
+  background: var(--button-active-bg);
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+/*ok actual modal now*/
+.modal {
+    
+  visibility: hidden;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, 0.7);
+  transition: all 0.4s;
+}
+
+/*opening it*/
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*content :D*/
+.modal-content {
+  position: relative;
+  width: 25em;
+  height: 600px;
+  max-width: 90%;
+  min-width: 20%;
+  background: var(--content-bg);
+  border: 0.3em solid black;
+  border-radius: 1em;
+  color: black;
+}
+/*closing*/
+.close-modal {
+  position: absolute;
+  top: -0.2em;
+  right: 0.4em;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 1.7em;
+}
+
+.modal-head{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: gray;
+    height: 40px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    color: aliceblue;
+    text-align: center;
+}
+
+.Cbody
+.datepicker{
+  display: block;
+    height: 200vh;
+    width: 23em;
+}
+
+.time{
+  height: 100vh;
+  width: 23em;
+  display: block;
+}
+
+
+p > input{
+  margin-top: 15px;
+  border-radius: 3px;
+  height: 45px;
+  width: 220px;
+  background-color: aliceblue;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.close{
+  height: 30px;
+  width: 100px;
+  background-color: rgb(13, 131, 163);
+  border-radius: 5px;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+.close:hover{
+  height: 30px;
+  width: 100px;
+  background-color: rgb(153, 174, 233);
+  border: 1;
+  border-color: black;
+  border-style: solid;
+  padding: 2px 3px;
+
+}
+
+.submit{
+  height: 30px;
+  width:100px;
+  background-color: rgba(59, 220, 148, 0.744);
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.submit:hover{
+  background-color: rgb(172, 253, 135);
+  border: 1;
+  border-color: black;
+  border-style: solid;
+  padding: 2px 3px;
+}

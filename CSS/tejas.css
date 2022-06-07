@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #4f585c;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.weather-body{
+	width: 650px;
+	height: 500px;
+	border-radius: 18px;
+	background-color: dimgrey;
+	position: static;
+}
+
+
+
+.col1{
+	padding-left: 20px;
+}
+
+
+.col2-section-values{
+	flex: auto;
+	flex-direction: row;
+	padding-left: 100px;
+	justify-content: center;
+}
+
+.ele1{
+   display: inline-block;
+   width: auto;
+   height: 100%;
+
+}
+.ele2{
+	height: auto;
+	margin-top: 30px;
+	width: 200px;
+	justify-content: center;
+}
+
+.col-section-values{
+	margin-left: 150px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.ins-gap{
+  width: 100%;
+  height: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: block;
+  color: rgb(249, 247, 247);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100pt;
+  text-align: center;
+
+}
+
+.nav{
+  width: 100%;
+  height: 60px;
+  margin-top: 0;
+  background-color: rgb(255, 186, 67);
+  margin-bottom: 100px;
+}
+
+.wcontainer{
+  align-self: center;
+  margin-left: 100px;
+	margin-top: 40px;
+	z-index: 20px;
+}
+
+/* radial progress bar*/
+  
+h1 {
+	font-family: 'Open Sans';
+	color: rgb(14, 4, 4);
+	text-align: center;
+	margin: 50px 0 -80px;
+}
+a {
+	font-family: 'Open Sans';
+	color: rgb(7, 4, 4);
+	margin: 50px 0 -80px;
+	text-align: center;
+	width: 100%;
+	font-size: 12px;
+	text-decoration: none;
+}
+#wrapper{
+	position: relative;
+	top: 10px;
+	width: 500px;
+}
+.center {
+	left: 150%;
+	-webkit-transform: translate( -50% );
+	-ms-transform: translate( -50% );
+	transform: translate( -50% );
+}
+
+p{
+	margin-left: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 20px;
+}
+
+/*===== The CSS =====*/
+.progress1, .progress2, .progress3{
+	width: 200px;
+	height: 200px;
+	border: #263238;
+}
+.progress1 .fill, .progress2 .fill, .progress3 .fill, .progress1 .track, .progress2 .track, .progress3 .track{
+	fill: rgba(0, 0, 0, 0);
+	stroke-width: 4;
+	transform: rotate(90deg)translate(0px, -80px);
+}
+.progress1 .track, .progress2 .track, .progress3 .track{
+	stroke: rgb(172, 183, 191);
+}
+.progress1 .fill, .progress2 .fill, .progress3 .fill {
+	stroke: rgb(206, 205, 205);
+	stroke-dasharray: 219.99078369140625;
+	stroke-dashoffset: -219.99078369140625;
+	transition: stroke-dashoffset 1s;
+}
+.progress1.blue .fill {
+	stroke: rgb(0, 165, 202);
+}
+.progress3.pink .fill {
+	stroke: rgb(248, 34, 173);
+}
+
+.progress2.yellow .fill{
+	stroke: rgb(64, 239, 1);;
+}
+
+.progress1 .value, .progress2 .value, .progress3 .value, .progress1 .text,.progress2 .text, .progress3 .text {
+	font-family: 'Open Sans';
+	fill: rgb(255, 255, 255);
+	text-anchor: middle;
+}
+
+.progress1 .text,.progress2 .text, .progress3 .text {
+	font-size: 12px;
+	text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		cursor: default;
+}
+
+/* toggle switch */
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 105px;
+	height: 35px;
+	border: #0e0e0e;
+	border-width:5px;
+	border-style: solid;
+	border-radius: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+	display: none;
+}
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 30px;
+	width: 30px;
+	left: 5px;
+	bottom: 3px;
+	background-color: rgb(31, 28, 28);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+
+.switch-on, .switch-off {
+	position: absolute;
+	font-size: 14px;
+	color: white;
+
+}
+.switch-on{
+	left: 8px;
+	top: 6px;
+	display: none;
+}
+.switch-off {
+	right: 8px;
+	top: 6px;
+	color: #0e0e0e;
+	
+	
+}
+input:checked + .slider {
+	background-color: #81859d;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(66px);
+	-ms-transform: translateX(66px);
+	transform: translateX(66px);
+}
+input:checked ~ .switch-on {
+	display: block;
+}
+input:checked ~ .switch-off {
+	display: none;
+}
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+.slider.round:before {
+	border-radius: 50%;
+}
